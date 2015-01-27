@@ -16,4 +16,12 @@ describe "list" do
     list.append(3)
     expect(list.end.value).to eq(3)
   end
+  it "delete head in a list" do
+    list = List.new()
+    list.append(1)
+    list.append(2)
+    pending("need to add next to node class")
+    list.deleteHead()
+    expect(list.head.value).to eq(2)
+  end
 end
