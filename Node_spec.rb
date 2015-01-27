@@ -70,5 +70,7 @@ describe "list" do
     list = List.new()
     list.append(1).append(2).append(3).append(2).append(1)
     expect(list.palindromic()).to eq(true)
+    list.append(1).append(2).append(3).append(3).append(1)
+    expect(list.palindromic()).to eq(false)
   end
 end
