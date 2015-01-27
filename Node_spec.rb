@@ -30,4 +30,11 @@ describe "list" do
     list.deleteEnd()
     expect(list.end.value).to eq(1)
   end
+  it "unique item is palindromic" do
+    list = List.new()
+    list.append(1)
+    expect(list.palindromic()).to eq(true)
+  end
+    
+
 end

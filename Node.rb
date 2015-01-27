@@ -9,6 +9,7 @@ end
 
 class List
   attr_reader :head, :end
+
   def append(value)
     if @end
       @end.next = Node.new(value,@end)
@@ -25,7 +26,12 @@ class List
   def deleteHead
     @head = @head.next
   end
+
   def deleteEnd
     @end = @end.previous
+  end
+
+  def palindromic
+    true
   end
 end
