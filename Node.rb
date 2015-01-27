@@ -11,16 +11,19 @@ class List
   attr_reader :head, :end
 
   def append(value)
-    if @end
-      @end.next = Node.new(value,@end)
-      @end = @end.next
-    else
-      @end = Node.new(value)
-    end
+    newNode = Node.new(value,@end)
 
     if not @head
-      @head = @end
+     @head = newNode
     end
+
+    if @end
+      @end.next = newNode
+      @end = newNode
+    else
+      @end = newNode
+    end
+
     self
   end
 
