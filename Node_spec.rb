@@ -13,8 +13,13 @@ describe "list" do
     list.append(2)
     expect(list.end.value).to eq(2)
     expect(list.head.value).to eq(1)
+    expect(list.head.next.value).to eq(2)
+    expect(list.end.previous.value).to eq(1)
     list.append(3)
     expect(list.end.value).to eq(3)
+    expect(list.end.previous.value).to eq(2)
+    expect(list.end.previous.previous.value).to eq(1)
+    expect(list.end.previous).to eq(list.head.next)
   end
   it "unique item is palindromic" do
     list = List.new()
