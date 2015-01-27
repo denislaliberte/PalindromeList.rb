@@ -16,21 +16,6 @@ describe "list" do
     list.append(3)
     expect(list.end.value).to eq(3)
   end
-  it "delete head in a list" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    list.deleteHead()
-    expect(list.head.value).to eq(2)
-    expect(list.head.previous).to eq(nil)
-  end
-  it "delete the end of a list" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    list.deleteEnd()
-    expect(list.end.value).to eq(1)
-  end
   it "unique item is palindromic" do
     list = List.new()
     list.append(1)

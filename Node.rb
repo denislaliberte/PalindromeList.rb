@@ -23,17 +23,6 @@ class List
     end
   end
 
-  def deleteHead
-    @head = @head.next
-    if @head
-      @head.previous = nil
-    end
-  end
-
-  def deleteEnd
-    @end = @end.previous
-  end
-
   def palindromic(first = @head, last = @end)
     if first and last 
       if first == last or first.previous == last
