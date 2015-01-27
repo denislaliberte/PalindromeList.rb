@@ -58,4 +58,12 @@ describe "list" do
     list.append(1)
     expect(list.palindromic()).to eq(false)
   end
+  it "detect a non palindromic four item list" do
+    list = List.new()
+    list.append(1)
+    list.append(2)
+    list.append(2)
+    list.append(1)
+    expect(list.palindromic()).to eq(true)
+  end
 end

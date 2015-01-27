@@ -28,7 +28,7 @@ class List
       if first == last or first.previous == last
         true
       else
-        first.value == last.value and self.palindromic(@head.next,@end.previous)
+        first.value == last.value and self.palindromic(first.next,last.previous)
       end
     else
       true
