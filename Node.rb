@@ -34,9 +34,13 @@ class List
     @end = @end.previous
   end
 
-  def palindromic
-    if @end and @head
-      @end.value == @head.value
+  def palindromic(first = @head, last = @end)
+    if first and last 
+      if first == last or first.previous == last
+        true
+      else
+        first.value == last.value and self.palindromic(@head.next,@end.previous)
+      end
     else
       true
     end
