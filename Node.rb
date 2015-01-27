@@ -24,14 +24,10 @@ class List
   end
 
   def palindromic(first = @head, last = @end)
-    if first and last 
-      if first == last or first.previous == last
-        true
-      else
-        first.value == last.value and self.palindromic(first.next,last.previous)
-      end
-    else
+    if first == last or first.previous == last
       true
+    else
+      first.value == last.value and self.palindromic(first.next,last.previous)
     end
   end
 end
