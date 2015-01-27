@@ -32,6 +32,10 @@ class List
   end
 
   def palindromic
-    @end == @head
+    if @end and @head
+      @end.value == @head.value
+    else
+      true
+    end
   end
 end
