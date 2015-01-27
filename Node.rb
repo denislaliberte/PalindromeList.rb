@@ -1,6 +1,5 @@
-
 class Node
-  attr_reader :value
+  attr_reader :value, :end
 
   def initialize(value)
     @value = value
@@ -8,8 +7,7 @@ class Node
 
   def add(value)
     @next = Node.new(value)
+    @end = @next
     self
   end
-
 end
-
