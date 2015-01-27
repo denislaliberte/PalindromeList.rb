@@ -1,6 +1,6 @@
 class Node
-  attr_reader :value
-  attr_accessor :next, :previous
+  attr_reader :value, :previous
+  attr_accessor :next
   def initialize(value, previous = nil)
     @value = value
     @previous = previous
