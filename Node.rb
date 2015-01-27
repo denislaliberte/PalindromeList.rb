@@ -21,6 +21,7 @@ class List
     if not @head
       @head = @end
     end
+    self
   end
 
   def palindromic(first = @head, last = @end)
