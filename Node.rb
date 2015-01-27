@@ -6,8 +6,9 @@ class Node
 end
 
 class List
-  attr_reader :head
+  attr_reader :head, :end
   def append(value)
     @head = Node.new(value)
+    @end = @head
   end
 end
