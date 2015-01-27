@@ -20,7 +20,6 @@ describe "list" do
     list = List.new()
     list.append(1)
     list.append(2)
-    pending("need to add next to node class")
     list.deleteHead()
     expect(list.head.value).to eq(2)
   end
