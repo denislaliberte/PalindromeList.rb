@@ -6,5 +6,10 @@ class Node
     @value = value
   end
 
+  def add(value)
+    @next = Node.new(value)
+    self
+  end
+
 end
 

@@ -5,4 +5,7 @@ describe "list" do
     node = Node.new(1)
     expect(node.value).to eq(1)
   end
+  it "add an item" do
+    node = Node.new(1).add(2)
+  end
 end
