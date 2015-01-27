@@ -35,6 +35,13 @@ describe "list" do
     list.append(1)
     expect(list.palindromic()).to eq(true)
   end
+  it "is it not palindromic if it contains two different items" do
+    list = List.new()
+    list.append(1)
+    list.append(2)
+    expect(list.palindromic()).to eq(false)
+  end
+
     
 
 end
