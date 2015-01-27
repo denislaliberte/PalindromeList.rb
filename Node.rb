@@ -13,5 +13,7 @@ class Node
 end
 
 class List
-
+  def append(value)
+    @head = Node.new(value)
+  end
 end
