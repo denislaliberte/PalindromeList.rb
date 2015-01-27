@@ -11,3 +11,7 @@ class Node
     self
   end
 end
+
+class List
+
+end
