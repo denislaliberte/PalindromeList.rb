@@ -1,6 +1,6 @@
 class Node
-  attr_reader :value, :previous
-  attr_accessor :next
+  attr_reader :value
+  attr_accessor :next, :previous
   def initialize(value, previous = nil)
     @value = value
     @previous = previous
@@ -25,6 +25,9 @@ class List
 
   def deleteHead
     @head = @head.next
+    if @head
+      @head.previous = nil
+    end
   end
 
   def deleteEnd

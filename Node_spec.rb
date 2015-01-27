@@ -22,6 +22,7 @@ describe "list" do
     list.append(2)
     list.deleteHead()
     expect(list.head.value).to eq(2)
+    expect(list.head.previous).to eq(nil)
   end
   it "delete the end of a list" do
     list = List.new()
