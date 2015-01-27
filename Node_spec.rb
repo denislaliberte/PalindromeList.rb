@@ -10,5 +10,9 @@ describe "list" do
     list = List.new()
     list.append(1)
     expect(list.end.value).to eq(1)
+    expect(list.head.value).to eq(1)
+    list.append(2)
+    expect(list.end.value).to eq(2)
+    expect(list.head.value).to eq(1)
   end
 end
