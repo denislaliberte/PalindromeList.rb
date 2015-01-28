@@ -1,4 +1,4 @@
-require './Node.rb'
+require './List.rb'
 
 describe "list" do
   it "create a list with one element" do
