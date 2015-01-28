@@ -10,8 +10,7 @@ describe "@list" do
     expect(@list.end.value).to eq(1)
   end
   it "add three item in a @list" do
-    @list.append(1)
-    @list.append(2)
+    @list.append_multiple([1,2])
     expect(@list.end.value).to eq(2)
     expect(@list.head.value).to eq(1)
     expect(@list.head.next.value).to eq(2)
@@ -31,41 +30,31 @@ describe "@list" do
   end
 
   it "it is not palindromic if it contains two different items" do
-    @list.append(1)
-    @list.append(2)
+    @list.append_multiple([1,2])
     expect(@list.palindromic()).to eq(false)
   end
   it "it is palindromic if it contains two items with the same value" do
-    @list.append(1)
-    @list.append(1)
+    @list.append_multiple([1,1])
     expect(@list.palindromic()).to eq(true)
   end
   it "detect a three item palindromic @list" do
-    @list.append(1)
-    @list.append(2)
-    @list.append(1)
+    @list.append_multiple([1,2,1])
     expect(@list.palindromic()).to eq(true)
   end
   it "detect a non palindromic four item @list" do
-    @list.append(1)
-    @list.append(2)
-    @list.append(3)
-    @list.append(1)
+    @list.append_multiple([1,2,3,1])
     expect(@list.palindromic()).to eq(false)
   end
   it "detect a non palindromic four item @list" do
-    @list.append(1)
-    @list.append(2)
-    @list.append(2)
-    @list.append(1)
+    @list.append_multiple([1,2,2,1])
     expect(@list.palindromic()).to eq(true)
   end
   it "detect a palindromic four item list" do
-    @list.append(1).append(2).append(3).append(2).append(1)
+    @list.append_multiple([1,2,3,2,1])
     expect(@list.palindromic()).to eq(true)
   end
   it "detect a palindromic four item list" do
-    @list.append(1).append(2).append(3).append(3).append(1)
+    @list.append_multiple([1,2,3,3,1])
     expect(@list.palindromic()).to eq(false)
   end
 end

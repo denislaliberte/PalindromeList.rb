@@ -25,6 +25,12 @@ class List
     end
   end
 
+  def append_multiple(values)
+    values.each do |value|
+      self.append(value)
+    end
+  end
+
   def palindromic(first = @head, last = @end)
     if first == last or first.previous == last
       true
