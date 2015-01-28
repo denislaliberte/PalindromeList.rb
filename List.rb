@@ -5,10 +5,8 @@ class List
 
   def append(value)
     newNode = Node.new(value,@end)
+    self.add_to_head(newNode)
 
-    if not @head
-     @head = newNode
-    end
 
     if @end
       @end.next = newNode
@@ -18,6 +16,12 @@ class List
     end
 
     self
+  end
+
+  def add_to_head(newNode)
+    if not @head
+     @head = newNode
+    end
   end
 
   def palindromic(first = @head, last = @end)
