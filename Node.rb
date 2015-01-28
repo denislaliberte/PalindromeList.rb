@@ -6,4 +6,3 @@ class Node
     @previous = previous
   end
 end
-
