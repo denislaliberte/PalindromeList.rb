@@ -16,13 +16,13 @@ describe "List" do
     list.add("a").add("a")
     expect(list.palindromic()).to be true
   end
-  it "palindromic list" do
-    list.add("a").add("b").add("a")
-    expect(list.palindromic()).to be true
-  end
   it "detect not palindromic two element list" do 
     list.add("a").add("b")
     expect(list.palindromic()).to be false
+  end
+  it "palindromic list" do
+    list.add("a").add("b").add("a")
+    expect(list.palindromic()).to be true
   end
   it "detect not palindromic four elements list" do
     list.add("a").add("b").add("c").add("a")
