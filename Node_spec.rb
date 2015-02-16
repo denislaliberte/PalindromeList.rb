@@ -22,15 +22,19 @@ describe "List" do
     list.add("a").add("b")
     expect(list.palindromic()).to be false
   end
-  it "palindromic list" do
+  it "detect palindromic tree element list" do
     list.add("a").add("b").add("a")
     expect(list.palindromic()).to be true
   end
-  it "detect not palindromic four elements list" do
+  it "detect not palindromic four element list" do
     list.add("a").add("b").add("c").add("a")
     expect(list.palindromic()).to be false
   end
-  it "return an array of the valuse" do
+  it "detect not palindromic four element list" do
+    list.add("a").add("b").add("b").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "return an array of the values" do
     list.add("a").add("b").add("c")
     expect(list.values()).to eq(["a","b","c"])
   end
