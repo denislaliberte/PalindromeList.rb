@@ -13,7 +13,9 @@ describe "List" do
     expect(list.palindromic()).to eq(true)
   end
   it "two different items is not palindromic" do
+    pending("implement add before")
     list = List.new()
     list.add("a").add("b")
+    expect(list.palindromic()).to eq(false)
   end
 end
