@@ -8,7 +8,7 @@ describe "Node" do
 end
 
 describe "List" do 
-  subject(:list) {List.new()}
+  subject(:list) { List.new() }
   it "empty string is palindromic" do
     expect(list.palindromic()).to eq(true)
   end
