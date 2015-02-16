@@ -12,6 +12,8 @@ class List
   def palindromic(first = @head,last = @end)
     if first == last
       true
+    elsif first.next == last
+      first.value == last.value
     else
       first.value == last.value and self.palindromic(first.next, last.previous)
     end

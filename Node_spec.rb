@@ -12,11 +12,19 @@ describe "List" do
   it "empty string is palindromic" do
     expect(list.palindromic()).to be true
   end
-  it "two different items is not palindromic" do
+  it "detect two element palindromic list" do
+    list.add("a").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "palindromic list" do
+    list.add("a").add("b").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "detect not palindromic two element list" do 
     list.add("a").add("b")
     expect(list.palindromic()).to be false
   end
-  it "detect not palindromic list" do 
+  it "detect not palindromic four elements list" do
     list.add("a").add("b").add("c").add("a")
     expect(list.palindromic()).to be false
   end
