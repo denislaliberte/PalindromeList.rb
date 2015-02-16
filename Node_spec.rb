@@ -12,4 +12,8 @@ describe "List" do
     list = List.new()
     expect(list.palindromic()).to eq(true)
   end
+  it "two different items is not palindromic" do
+    list = List.new()
+    list.add("a")
+  end
 end

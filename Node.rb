@@ -11,4 +11,7 @@ class List
   def palindromic
     true
   end
+  def add(value)
+
+  end
 end
