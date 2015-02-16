@@ -6,3 +6,10 @@ describe "Node" do
     expect(node.value).to eq(1)
   end
 end
+
+describe "List" do 
+  it "empty string is not palindromic" do
+    list = List.new()
+  end
+
+end

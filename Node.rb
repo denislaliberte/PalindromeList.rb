@@ -6,3 +6,7 @@ class Node
     @value = value
   end
 end
+
+class List 
+
+end
