@@ -1,37 +1,36 @@
+
 class Node
-  attr_reader :value, :previous
-  attr_accessor :next
-  def initialize(value, previous = nil)
+  attr_accessor :next, :previous
+  attr_reader :value
+
+  def initialize(value)
     @value = value
-    @previous = previous
   end
 end
 
-class List
-  attr_reader :head, :end
-
-  def append(value)
-    if @end
-      @end.next = Node.new(value,@end)
-      @end = @end.next
+class List 
+  def palindromic(first = @head,last = @end)
+    if first == last
+      true
+    elsif first.next == last
+      first.value == last.value
     else
-      @end = Node.new(value)
-    end
-
-    if not @head
-      @head = @end
+      first.value == last.value and self.palindromic(first.next, last.previous)
     end
   end
-
-  def deleteHead
-    @head = @head.next
+  def add(value)
+    new = Node.new(value)
+    @head = new unless @head
+    @end.next = new unless not @end
+    new.previous = @end unless not @end
+    @end = new
+    self
   end
-
-  def deleteEnd
-    @end = @end.previous
-  end
-
-  def palindromic
-    @end == @head
+  def values(a = @head)
+    if a == @end
+      [a.value]
+    else
+      self.values(a.next).unshift(a.value)
+    end
   end
 end

@@ -1,49 +1,41 @@
 require './Node.rb'
 
-describe "list" do
-  it "create a list with one element" do
-    list = List.new()
-    list.append(1)
-    expect(list.head.value).to eq(1)
-    expect(list.end.value).to eq(1)
+describe "Node" do
+  it "create node" do
+    node = Node.new(1)
+    expect(node.value).to eq(1)
   end
-  it "add three item in a list" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    expect(list.end.value).to eq(2)
-    expect(list.head.value).to eq(1)
-    list.append(3)
-    expect(list.end.value).to eq(3)
-  end
-  it "delete head in a list" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    list.deleteHead()
-    expect(list.head.value).to eq(2)
-  end
-  it "delete the end of a list" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    list.deleteEnd()
-    expect(list.end.value).to eq(1)
-  end
-  it "unique item is palindromic" do
-    list = List.new()
-    list.append(1)
-    expect(list.palindromic()).to eq(true)
-  end
-  it "is palindromic if list is empty" do
-    list = List.new()
-    expect(list.palindromic()).to eq(true)
-  end
+end
 
-  it "is it not palindromic if it contains two different items" do
-    list = List.new()
-    list.append(1)
-    list.append(2)
-    expect(list.palindromic()).to eq(false)
+describe "List" do 
+  subject(:list) { List.new() }
+  it "empty string is palindromic" do
+    expect(list.palindromic()).to be true
+    list.add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "detect two element palindromic list" do
+    list.add("a").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "detect not palindromic two element list" do 
+    list.add("a").add("b")
+    expect(list.palindromic()).to be false
+  end
+  it "detect palindromic tree element list" do
+    list.add("a").add("b").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "detect not palindromic four element list" do
+    list.add("a").add("b").add("c").add("a")
+    expect(list.palindromic()).to be false
+  end
+  it "detect not palindromic four element list" do
+    list.add("a").add("b").add("b").add("a")
+    expect(list.palindromic()).to be true
+  end
+  it "return an array of the values" do
+    list.add("a").add("b").add("c")
+    expect(list.values()).to eq(["a","b","c"])
   end
 end
