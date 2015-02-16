@@ -11,6 +11,8 @@ describe "List" do
   subject(:list) { List.new() }
   it "empty string is palindromic" do
     expect(list.palindromic()).to be true
+    list.add("a")
+    expect(list.palindromic()).to be true
   end
   it "detect two element palindromic list" do
     list.add("a").add("a")
