@@ -10,15 +10,15 @@ end
 describe "List" do 
   subject(:list) { List.new() }
   it "empty string is palindromic" do
-    expect(list.palindromic()).to eq(true)
+    expect(list.palindromic()).to be true
   end
   it "two different items is not palindromic" do
     list.add("a").add("b")
-    expect(list.palindromic()).to eq(false)
+    expect(list.palindromic()).to be false
   end
   it "detect not palindromic list" do 
     list.add("a").add("b").add("c").add("a")
-    expect(list.palindromic()).to eq(false)
+    expect(list.palindromic()).to be false
   end
   it "return an array of the valuse" do
     list.add("a").add("b").add("c")
