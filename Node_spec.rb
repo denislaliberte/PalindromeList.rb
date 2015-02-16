@@ -16,6 +16,10 @@ describe "List" do
     list.add("a").add("b")
     expect(list.palindromic()).to eq(false)
   end
+  it "detect not palindromic list" do 
+    list.add("a").add("b").add("c").add("a")
+    expect(list.palindromic()).to eq(false)
+  end
   it "return an array of the valuse" do
     list.add("a").add("b").add("c")
     expect(list.values()).to eq(["a","b","c"])

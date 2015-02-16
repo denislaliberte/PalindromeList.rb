@@ -1,6 +1,6 @@
 
 class Node
-  attr_accessor :next
+  attr_accessor :next, :previous
   attr_reader :value
 
   def initialize(value)
@@ -9,17 +9,18 @@ class Node
 end
 
 class List 
-  def palindromic
-    if @head == @end
+  def palindromic(first = @head,last = @end)
+    if first == last
       true
     else
-      @head.value == @end.value
+      first.value == last.value and self.palindromic(first.next, last.previous)
     end
   end
   def add(value)
     new = Node.new(value)
     @head = new unless @head
     @end.next = new unless not @end
+    new.previous = @end unless not @end
     @end = new
     self
   end
