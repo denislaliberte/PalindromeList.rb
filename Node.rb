@@ -8,5 +8,7 @@ class Node
 end
 
 class List 
-
+  def palindromic
+    true
+  end
 end

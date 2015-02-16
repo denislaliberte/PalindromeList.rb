@@ -8,8 +8,8 @@ describe "Node" do
 end
 
 describe "List" do 
-  it "empty string is not palindromic" do
+  it "empty string is palindromic" do
     list = List.new()
+    expect(list.palindromic()).to eq(true)
   end
-
 end
