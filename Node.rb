@@ -1,7 +1,8 @@
 
 class Node
+  attr_reader :value
 
-  def initialize(a)
+  def initialize(value)
+    @value = value
   end
-
 end

@@ -1,7 +1,8 @@
 require './Node.rb'
+
 describe "Node" do
   it "canary test" do
     node = Node.new(1)
-    expect(true).to eq(true)
+    expect(node.value).to eq(1)
   end
 end
