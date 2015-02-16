@@ -21,8 +21,10 @@ class List
   def add(value)
     new = Node.new(value)
     @head = new unless @head
-    @end.next = new unless not @end
-    new.previous = @end unless not @end
+    if @end
+      @end.next = new
+      new.previous = @end
+    end
     @end = new
     self
   end
