@@ -19,7 +19,11 @@ class List
     @end = new
     self
   end
-  def values
-    [@head.value,@head.next.value]
+  def values(a = @head)
+    if a == @end
+      [a.value]
+    else
+      self.values(a.next).unshift(a.value)
+    end
   end
 end
