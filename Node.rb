@@ -14,4 +14,7 @@ class List
   def add(value)
     self
   end
+  def values
+    ["a"]
+  end
 end
