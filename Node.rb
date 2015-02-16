@@ -12,6 +12,6 @@ class List
     true
   end
   def add(value)
-
+    self
   end
 end

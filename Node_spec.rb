@@ -14,6 +14,6 @@ describe "List" do
   end
   it "two different items is not palindromic" do
     list = List.new()
-    list.add("a")
+    list.add("a").add("b")
   end
 end
