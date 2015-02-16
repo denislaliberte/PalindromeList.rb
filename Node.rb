@@ -13,10 +13,11 @@ class List
   end
   def add(value)
     new = Node.new(value)
-    @head = new
+    @head = new unless @head
+    @end = new
     self
   end
   def values
-    [@head.value]
+    [@head.value,@end.value]
   end
 end
