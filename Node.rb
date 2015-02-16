@@ -10,7 +10,7 @@ end
 
 class List 
   def palindromic
-    if not @head
+    if @head == @end
       true
     else
       @head.value == @end.value
