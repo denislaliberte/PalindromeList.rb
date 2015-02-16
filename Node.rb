@@ -12,9 +12,11 @@ class List
     true
   end
   def add(value)
+    new = Node.new(value)
+    @head = new
     self
   end
   def values
-    ["a"]
+    [@head.value]
   end
 end

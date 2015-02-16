@@ -18,7 +18,7 @@ describe "List" do
     expect(list.palindromic()).to eq(false)
   end
   it "return an array of the valuse" do
-    list.add("a")
-    expect(list.values()).to eq(["a"])
+    list.add("b")
+    expect(list.values()).to eq(["b"])
   end
 end
