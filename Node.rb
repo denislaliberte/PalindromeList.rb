@@ -10,7 +10,11 @@ end
 
 class List 
   def palindromic
-    true
+    if not @head
+      true
+    else
+      @head.value == @end.value
+    end
   end
   def add(value)
     new = Node.new(value)
