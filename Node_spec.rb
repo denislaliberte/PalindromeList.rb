@@ -1,4 +1,4 @@
-require './List.rb'
+require './Node.rb'
 
 describe "Node" do
   it "create node" do
@@ -11,8 +11,6 @@ describe "List" do
   subject(:list) { List.new() }
   it "empty string is palindromic" do
     expect(list.palindromic()).to be true
-  end
-  it "one element list is palindromic" do
     list.add("a")
     expect(list.palindromic()).to be true
   end
