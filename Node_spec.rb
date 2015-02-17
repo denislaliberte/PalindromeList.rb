@@ -1,4 +1,4 @@
-require './Node.rb'
+require './List.rb'
 
 describe "Node" do
   it "create node" do
